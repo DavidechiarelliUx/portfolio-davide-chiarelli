@@ -1,4 +1,122 @@
 body {
     background-color: $background-main;
 }
+
+html {
+  font-family: $font-primary;
+  font-size: 14px; // per mobile
+  line-height: 1.6; // Altezza della linea di base
+}
+
+
+h1 {
+  font-size: 1.714rem; // 24px su base 14px
+  color: $color-primary;
+}
+
+h2 {
+  font-size: 1.429rem; // 20px su base 14px
+  color: $color-primary; 
+}
+
+h3 {
+  font-size: 1.286rem; // 18px su base 14px
+  color:$color-secondary;
+
+}
+
+p {
+  font-size: 1rem;
+  color:$color-secondary; // 14px su base 14px
+
+}
+
+
+
+
+// Media query per tablet
+@media (min-width: $breakpoint-tablet) {
+  html {
+    font-size: 16px; // passa a 16px per i tablet
+  }
+
+  h1 {
+    font-size: 2rem; // 32px su base 16px
+  }
+
+  h2 {
+    font-size: 1.75rem; // 28px su base 16px
+  }
+
+  h3 {
+    font-size: 1.5rem; // 24px su base 16px
+  }
+
+  p {
+    font-size: 1rem; // 16px su base 16px
+  }
+}
+
+// Media query per desktop
+@media (min-width: $breakpoint-desktop) {
+  html {
+    font-size: 18px; // aumenta a 18px per desktop
+  }
+
+  h1 {
+    font-size: 2.222rem; // 40px su base 18px
+  }
+
+  h2 {
+    font-size: 2rem; // 36px su base 18px
+  }
+
+  h3 {
+    font-size: 1.778rem; // 32px su base 18px
+  }
+
+  p {
+    font-size: 1rem; // 18px su base 18px
+  }
+}
+
+
+
+// Stili base per i bottoni
+button {
+  color: $color-tertiary;
+  background-color: $color-button;
+  border: none;
+  border-radius: 20px; 
+  padding: 10px 20px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease; // Per un effetto di transizione sullo sfondo
   
+  &:hover {
+    background-color: darken($color-button, 10%); // Scurisce il colore del bottone all'hover
+    border: 1px solid $color-tertiary;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(132, 228, 212, 0.5); // Ad esempio per un focus style
+    
+  }
+}
+
+// Media query per dispositivi mobili
+@media (max-width: $breakpoint-mobile ) {
+  button {
+    padding: 8px 16px; 
+  }
+}
+
+// Media query per tablet
+@media (min-width: $breakpoint-tablet) and (max-width:  $breakpoint-desktop) {
+  button {
+    padding: 9px 18px; 
+  }
+}
+
+
+

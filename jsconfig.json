@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
+    // altre opzioni del compilatore...
+    "baseUrl": ".", // Questo deve essere impostato per utilizzare "paths"
     "paths": {
       "@/*": ["./src/*"]
     }
-  }
+  },
+  // altre configurazioni...
 }
