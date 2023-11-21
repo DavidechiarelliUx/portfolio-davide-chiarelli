@@ -58,7 +58,7 @@ p {
 }
 
 // Media query per desktop
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: 900px) {
   html {
     font-size: 18px; // aumenta a 18px per desktop
   }
@@ -82,41 +82,85 @@ p {
 
 
 
-// Stili base per i bottoni
-button {
-  color: $color-tertiary;
-  background-color: $color-button;
-  border: none;
-  border-radius: 20px; 
-  padding: 10px 20px; 
-  cursor: pointer;
-  transition: background-color 0.3s ease; // Per un effetto di transizione sullo sfondo
+// // Stili base per i bottoni
+// button {
+//   color: $color-tertiary;
+//   background-color: $color-button;
+//   border: none;
+//   border-radius: 20px; 
+//   padding: 10px 20px; 
+//   cursor: pointer;
+//   transition: background-color 0.3s ease; // Per un effetto di transizione sullo sfondo
   
-  &:hover {
-    background-color: darken($color-button, 10%); // Scurisce il colore del bottone all'hover
-    border: 1px solid $color-tertiary;
-  }
+//   &:hover {
+//     background-color: darken($color-button, 10%); // Scurisce il colore del bottone all'hover
+//     border: 1px solid $color-tertiary;
+//   }
 
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(132, 228, 212, 0.5); // Ad esempio per un focus style
+//   &:focus {
+//     outline: none;
+//     box-shadow: 0 0 0 2px rgba(132, 228, 212, 0.5); // Ad esempio per un focus style
     
+//   }
+// }
+
+// // Media query per dispositivi mobili
+// @media (max-width: 767px) {
+//   button {
+//     padding: 8px 16px; // Dimensioni più piccole per dispositivi mobili
+//   }
+// }
+
+// // Media query per tablet
+// @media (min-width: 768px) and (max-width: 1023px) {
+//   button {
+//     padding: 9px 18px; // Dimensioni intermedie per tablet
+//   }
+// }
+
+
+@mixin button($bcolor, $url, $x1, $y1, $bor, $col) {
+  background: $color-button;
+  color: $color-tertiary;
+  -webkit-mask: url($url) no-repeat;
+  mask: url($url) no-repeat;
+  -webkit-mask-size: $x1 $y1;
+  mask-size: $x1 $y1;
+  border: none;
+  transition: background-color 0.5s;
+  border-radius: 20px;
+  padding: 10px 20px; 
+  overflow: hidden;
+  cursor: pointer;
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
   }
 }
 
-// Media query per dispositivi mobili
-@media (max-width: $breakpoint-mobile ) {
-  button {
-    padding: 8px 16px; 
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
   }
 }
+button {
+  @include button(#000, "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png", 2300%, 100%, none, #fff);
+  width: 101%;
+  height: 100%;
+  border: none;
 
-// Media query per tablet
-@media (min-width: $breakpoint-tablet) and (max-width:  $breakpoint-desktop) {
-  button {
-    padding: 9px 18px; 
+  &:hover {
+    animation: ani 0.7s steps(22) forwards;
   }
 }
-
-
-

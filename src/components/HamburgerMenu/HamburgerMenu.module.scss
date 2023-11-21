@@ -1,0 +1,129 @@
+.logo {
+    display: flex;
+    align-items: center;
+    @media (max-width: 768px) {
+    
+    }
+  }
+
+  .hamburgerContainer {
+    display: relative;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+  
+    @media (min-width: 769px) {
+      margin-right: 40%;
+      margin-bottom: 3%;
+    }
+  }
+  
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: none;
+    
+  
+    @media (max-width: 768px) {
+      display: block;
+      margin-left: 10% ;
+    }
+  }
+  
+  .line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: $color-tertiary;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+  }
+  
+  .ham3 .top {
+    stroke-dasharray: 40 130;
+  }
+  
+  .ham3 .middle {
+    stroke-dasharray: 40 140;
+  }
+  
+  .ham3 .bottom {
+    stroke-dasharray: 40 205;
+  }
+  
+  .ham3.active .top {
+    stroke-dasharray: 75 130;
+    stroke-dashoffset: -63px;
+    
+  }
+  
+  .ham3.active .middle {
+    stroke-dashoffset: -102px;
+  }
+  
+  .ham3.active .bottom {
+    stroke-dasharray: 110 205;
+    stroke-dashoffset: -86px;
+  }
+  
+    .menu {
+    display: block;
+    position: absolute;
+    margin-left: -30%;
+    
+    
+    
+    @media (max-width: 768px) {
+      display: none;
+      background-color: $background-main;
+      
+
+      &.show {
+        display: block;
+        margin-left: -10px;
+      }
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items:first baseline;
+  
+      @media (min-width: 769px) {
+        flex-direction: row;
+      }
+  
+      li {
+        margin: 10px 20px;
+
+        :hover{
+          text-decoration:underline;
+        }
+  
+        a {
+          text-decoration: none;
+          color: $color-secondary;
+        }
+        @media (max-width: 768px) {
+        button{
+          display: none;
+          }
+        }
+      }
+    }
+  }
+  
+  .NumberNav {
+    color: $color-tertiary;
+  }
+  
+  .NameNav {
+    color: $color-primary;
+  }
