@@ -3,7 +3,6 @@ body {
 }
 
 html {
-  font-family: $font-primary;
   font-size: 14px; // per mobile
   line-height: 1.6; // Altezza della linea di base
 }
@@ -12,11 +11,12 @@ html {
 h1 {
   font-size: 1.714rem; // 24px su base 14px
   color: $color-primary;
+  font-family: $font-primary;
 }
 
 h2 {
   font-size: 1.429rem; // 20px su base 14px
-  color: $color-primary; 
+  color: $color-secondary; 
 }
 
 h3 {
@@ -29,6 +29,9 @@ p {
   font-size: 1rem;
   color:$color-secondary; // 14px su base 14px
 
+}
+span{
+  color: $color-tertiary;
 }
 
 
@@ -77,6 +80,9 @@ p {
 
   p {
     font-size: 1rem; // 18px su base 18px
+  }
+  span{
+    color: $color-tertiary;
   }
 }
 
