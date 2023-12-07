@@ -1,0 +1,80 @@
+$color-tertiary: #64ffda; // Sostituisci con il tuo colore esatto
+
+.projectCard {
+  margin-top: 5rem;
+  background-color: rgba(10, 25, 47, 0.75); // Opacità per l'effetto di trasparenza
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    background: rgba( 100, 255, 218, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid $color-tertiary;
+  }
+}
+
+.cardContent {
+  padding: 20px;
+  color: #ccd6f6;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projectDate {
+  font-size: 0.9em;
+  color: #8892b0;
+}
+
+.projectTitle {
+  color: white;
+  transition: color 0.3s ease;
+  &:hover {
+    color: $color-tertiary;
+  }
+}
+
+.projectRole {
+  font-weight: bold;
+}
+
+.projectDescription {
+  color: #8892b0;
+}
+
+.techStack {
+  margin-top: 15px;
+}
+
+.technologiesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  margin-top: 1rem;
+}
+
+.techBadge {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 0.7rem;
+  background: transparent;
+  border: 1px solid $color-tertiary;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: $color-tertiary;
+
+  .techImage {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.2rem;
+  }
+}

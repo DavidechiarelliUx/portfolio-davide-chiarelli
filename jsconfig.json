@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
-    // altre opzioni del compilatore...
-    "baseUrl": ".", // Questo deve essere impostato per utilizzare "paths"
+    "baseUrl": ".", // Ti permette di avere import relativi alla base del tuo progetto
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["src/*"]
+    },
+    "checkJs": false // Disabilita il controllo del codice JavaScript usando TypeScript
   },
-  // altre configurazioni...
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*"
+  ]
 }
