@@ -8,6 +8,12 @@ import OtherProject from "@/components/OtherProjects";
 
 export default function Homepage() {
 
+  // const stack = [
+  //   "JavaScript", "HTML5", "CSS3","SASS", "Firebase", "React", "NPM", "Next.js",
+  //   "React Router", "TailwindCSS", "Node.js", "Figma", "Framer",
+  //   "Adobe XD", "Canva", "TypeScript"
+  // ];
+
 
   return (
    <>
