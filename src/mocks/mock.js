@@ -3,6 +3,13 @@ export const projectsMock = [
     id: 1,
     date: "2023",
     title: "Fun-Trade",
+    
+    imageUrls: [
+      "/project1.png",
+      "/project2.png",
+      "/project3.png",
+      "/project4.png",
+    ],
     company: "null",
     description: "In un contesto di lavoro di squadra e utilizzando metodologie Agile, ho ideato e progettato l'esperienza utente (UX) e l'interfaccia utente (UI) di un'applicazione web dedicata alla consultazione, all'acquisto e alla gestione di criptovalute. Ho applicato le migliori pratiche di design UX/UI per garantire un'esperienza utente fluida e un'interfaccia utente intuitiva. Successivamente, ho tradotto questi design in codice utilizzando tecnologie moderne come Next.js, CSS Modules e SASS, fornendo un'implementazione front-end robusta e reattiva. Questo progetto ha richiesto una forte coordinazione del team, creatività, e competenze tecniche avanzate.",
     role: "Front End Developer &  Ux / Ui Design",
@@ -27,7 +34,8 @@ export const projectsMock = [
       imageUrl:"../assets/stack/firebase-1.svg"
     },
     ],
-    imageUrl: "/images/project1.png",
+    
+    
   },
   // {
   //   id: 2,
