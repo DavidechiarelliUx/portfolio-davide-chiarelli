@@ -39,11 +39,11 @@ export const stack= [
         name:"Figma",
         imageUrl: "../assets/stack/figma.svg"
     },
-    {
-        id:9,
-        name:"Adobe Xd",
-        imageUrl: "../assets/stack/Adobe.svg"
-    },
+    // {
+    //     id:9,
+    //     name:"Adobe Xd",
+    //     imageUrl: "../assets/stack/Adobe.svg"
+    // },
     {
         id:10,
         name:"Canva",
