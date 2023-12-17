@@ -6,6 +6,7 @@ $color-icon: #a8b2d1;
 
 .otherProjects {
   padding: 2rem 1rem;
+  
   h2 {
     color: $color-primary;
     text-align: center;
@@ -20,11 +21,11 @@ $color-icon: #a8b2d1;
   gap: 2rem;
   padding: 2rem 1rem;
   margin-top: 2rem;
+  
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    padding: 5rem 0;
-    margin-left: 15%;
+    padding: 1rem 0; 
   }
 }
 
@@ -34,12 +35,10 @@ $color-icon: #a8b2d1;
   padding: 2rem;
   border-radius: 10px;
   text-align: center;
-  width: 100%;
-  margin-top: 2rem;
-  max-width: 250px;
-  margin: 2rem auto;
+  width: calc(100% - 4rem); 
+  margin: 2rem auto; 
   transition: background-color 0.3s, transform 0.2s;
-
+  
   h3 {
     color: $color-primary;
     font-size: 0.8rem;
@@ -73,6 +72,7 @@ $color-icon: #a8b2d1;
     fill: $color-icon;
     margin: 0 0.5rem;
   }
+  
   &:hover {
     background-color: lighten($color-background, 5%);
     transform: scale(1.05); 

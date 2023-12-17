@@ -46,11 +46,15 @@ export default function Homepage() {
               {stack.map((tech) => (
                 <span key={tech.id} className={styles.techBadge}>
                   {tech.name}
-                  <img src={tech.imageUrl} alt={tech.name} className={styles.img}/>
+                  <img 
+                    src={tech.imageUrl} 
+                    alt={tech.name} 
+                    className={styles.img}
+                    style={tech.id === 12 ? { marginBottom: '-10px' } : {}}
+                  />
                 </span>
               ))}
           </div>
-
         </section>
         <section className={styles.projectsSection}>
         <h2 className={styles.ProjectTitle}><span>02.</span> My Project</h2>

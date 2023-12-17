@@ -61,30 +61,48 @@
 .stackContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 2rem;
-}
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
 
-.techBadge {
-  display: flex; 
-  align-items: center; 
-  padding: 0.5rem 1rem;
-  background: transparent;
-  color: #64FFDA;
-  border: 1px solid $color-tertiary;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-
-  &:hover {
-    background-color: $color-tertiary;
-    color: #0A192F;
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
   }
 }
 
-.img {
-  width: 25px;
-  margin-left: 0.5rem; 
+.techBadge {
+  background-color: $background-main;
+  color: $color-tertiary;
+  border: 1px solid $color-tertiary;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  display: inline-flex; /* Adjusted to inline-flex for better alignment */
+  align-items: center; /* Ensures vertical center alignment within the flex container */
+  justify-content: center;
+ 
+
+  @media (max-width: 768px) {
+    width: calc((100% - 1rem) / 1);
+    margin: 0;
+    margin-right: -25px;
+    margin-top: 10px;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+    margin-left: 1rem;
+    display: inline-block; /* Ensures the image is treated as inline element with block properties */
+  vertical-align: middle; 
+  }
+  &:hover {
+    background-color: $color-primary;
+    color: $background-main;
+  }
 }
 
 .p {
