@@ -64,7 +64,4 @@ export const stack= [
         name:"GitHub",
         imageUrl: "../assets/github.svg"
     },
-    
-    
-    
 ];
