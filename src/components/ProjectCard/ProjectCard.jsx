@@ -9,7 +9,7 @@ const ProjectCard = ({ project }) => {
       setCurrentImageIndex(prevIndex =>
         prevIndex === project.imageUrls.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Cambia immagine ogni 3 secondi
+    }, 3000); 
 
     return () => clearInterval(timer);
   }, [project.imageUrls.length]);
@@ -53,15 +53,15 @@ const ProjectCard = ({ project }) => {
           ))}
           </div>
           <div className={styles.projectActions}>
-          <a href="https://fun-trade-cb7.vercel.app/" className={styles.viewProject}>
+        <a href={project.vercelLink} className={styles.viewProject}>
           view on Vercel
-          <img src="/assets/stack/vercel.svg" alt="GitHub" className={styles.icon} /> 
-          </a>
-          <a href="https://github.com/DavidechiarelliUx/fun-trade" className={styles.viewProject}>
+          <img src="/assets/stack/vercel.svg" alt="Vercel" className={styles.icon} /> 
+        </a>
+        <a href={project.githubLink} className={styles.viewProject}>
           view on Github
           <img src="/assets/github.svg" alt="GitHub" className={styles.icon} />
-          </a>
-          </div>
+        </a>
+      </div>
       </div>
     </div>
       
