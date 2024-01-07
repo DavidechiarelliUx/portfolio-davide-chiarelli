@@ -33,7 +33,7 @@ export default function Homepage() {
           </div>
       
         </section>
-        <section className={styles.aboutSection}>
+        <section id="about" className={styles.aboutSection}>
           <h2 className={styles.aboutTitle}><span>01.</span> About Me</h2>
           <p className={styles.aboutText}>
             👋 Ciao a tutti! Sono Davide, un appassionato Front-End Developer con un innata creatività 🌀 e un background in UX/UI Design. 🎨 Il mio obiettivo è creare esperienze web coinvolgenti e funzionali, utilizzando la mia competenza nel codice e nel design.
@@ -56,13 +56,48 @@ export default function Homepage() {
               ))}
           </div>
         </section>
-        <section className={styles.projectsSection}>
+        <section id="work" className={styles.projectsSection}>
         <h2 className={styles.ProjectTitle}><span>02.</span> My Project</h2>
             {projectsMock.map((project) => (
                 <ProjectCard key={project.id} project={project} />
             ))}
         </section>
         <OtherProject/>
+        <section id="contact" className={styles.contactSection}>
+            <div className={styles.contactForm}>
+              <h2 className={styles.formTitle}>Write us</h2>
+              <input type="text" placeholder="Name" className={styles.formInput} />
+              <input type="email" placeholder="Email" className={styles.formInput} />
+              <input type="text" placeholder="Subject" className={styles.formInput} />
+              <textarea placeholder="Message" className={styles.formTextArea}></textarea>
+              <button type="submit" className={styles.formButton}>Send Message</button>
+            </div>
+          
+            <div className={styles.contactInfo}>
+              <h2 className={styles.infoTitle}>Contact information</h2>
+              <p className={styles.infoText}>se vuoi parlare con me chiamami oppure scrivimi un messaggio</p>
+              <a href="mailto:chiarellidavide99@gmail.com" className={styles.contactEmail}>
+                <img src="/assets/stack/gmail.svg" alt="Email" className={styles.icon} /> 
+                chiarellidavide99@gmail.com
+              </a>
+              <a href="tel:+3664367468" className={styles.contactPhone}>
+                <img src="/assets/stack/iphone.svg" alt="Phone" className={styles.icon} /> 
+                3664367468
+              </a>
+              <a href="https://www.linkedin.com/in/davide-chiarelli-/" className={styles.socialLink}>
+                <img src="/assets/stack/linkedin.svg" alt="LinkedIn" className={styles.icon} /> 
+                LinkedIn
+              </a>
+              <a href="https://github.com/DavidechiarelliUx" className={styles.socialLink}>
+                <img src="/assets/github.svg" alt="Github" className={styles.icon} /> 
+                Github
+              </a>
+              <a href="https://vercel.com/dashboard" className={styles.socialLink}>
+                <img src="/assets/stack/vercel.svg" alt="Vercel" className={styles.icon} /> 
+                Vercel
+              </a>
+            </div>
+        </section>
       </main>
     </>
   );

@@ -130,3 +130,113 @@
     padding: 2rem;
   }
 }
+
+
+// contact section
+.contactSection {
+  background-color: $background-main;
+  color: $color-primary;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 4rem;
+  border-radius: 8px;
+  margin: auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
+
+.contactForm {
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+.formTitle,
+.infoTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.formInput,
+.formTextArea {
+  background: $color-button;
+  border: 1px solid $color-secondary;
+  color: $color-primary;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+
+  &:focus {
+    outline-color: $color-tertiary;
+  }
+}
+
+.formTextArea {
+  height: 150px;
+  resize: vertical;
+}
+
+.formButton {
+  background: $color-tertiary;
+  color: $color-button;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 10%;
+  
+  &:hover {
+    background-color: darken($color-tertiary, 10%);
+  }
+}
+
+.contactInfo {
+  flex-basis: 45%;
+  max-width: 500px;
+
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+  }
+}
+
+.infoText {
+  margin-bottom: 2rem;
+}
+
+.contactEmail,
+.contactPhone,
+.socialLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $color-primary;
+  margin-bottom: 1rem;
+
+  &:hover {
+    color: $color-tertiary;
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px; 
+  margin-right: 1rem;
+  fill: currentColor; 
+}
